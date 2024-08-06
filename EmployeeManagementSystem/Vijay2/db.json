@@ -1,0 +1,36 @@
+{
+  "employees": [
+    {
+      "empId": 101,
+      "empName": "Kirthick",
+      "empSalary": 2000,
+      "id": "06b5"
+    },
+    {
+      "empId": 102,
+      "empName": "Vijay",
+      "empSalary": 3000,
+      "id": "297e"
+    },
+    {
+      "id": "1011",
+      "empName": "afgfr",
+      "empSalary": "123"
+    },
+    {
+      "id": "123",
+      "empName": "daI",
+      "empSalary": "1234"
+    },
+    {
+      "id": "101",
+      "empName": "qrtqs",
+      "empSalary": "1234"
+    },
+    {
+      "id": "23",
+      "empName": "qrtqs",
+      "empSalary": "1234"
+    }
+  ]
+}
