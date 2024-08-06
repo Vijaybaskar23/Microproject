@@ -1,0 +1,28 @@
+{
+  "employees": [
+    {
+      "empId": 101,
+      "empName": "Kirthick",
+      "empSalary": 2000,
+      "id": "06b5"
+    },
+    {
+      "id": "123",
+      "Name": "Panel2",
+      "Blood": "b positive",
+      "Contact": "16709765"
+    },
+    {
+      "id": "126",
+      "Name": "Vijaya baskar R",
+      "Blood": "b positive",
+      "Contact": "1670976898"
+    },
+    {
+      "id": "126",
+      "Name": "Vijaya baskar R",
+      "Blood": "b positive",
+      "Contact": "1670976898"
+    }
+  ]
+}

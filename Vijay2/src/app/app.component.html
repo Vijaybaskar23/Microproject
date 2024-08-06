@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    </head>
+
+    <body>
+        <h1>Blood Bank Management System</h1>
+      
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                             <form #myForm="ngForm">
+                              <div class="form-group">
+                                <label for="Donor Id">
+                                    Donor Id
+                                </label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       name="donor" 
+                                       #empName="ngModel" ngModel
+                                       required
+                                        pattern="[0-9]+" />
+                            </div>
+                            <div *ngIf="empId.touched">
+                              <div *ngIf="empId.errors?.['required']">
+                                <b style="color: red;">Donor Id required.</b>
+                              </div>
+                              <div *nfIf="empId.error?.['pattern']">
+                                <font color="red"><b>Invalid Id Group</b></font>
+
+                              </div>
+                            </div>
+
+                                  <div class="form-group">
+                                    <label for="Donor Name">
+                                         Donor Name
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="name" 
+                                           #empId="ngModel" ngModel
+                                           
+                                           required
+                                            pattern="[0-9]+" />
+                                </div>
+                                <div *ngIf="empId.touched">
+                                  <div *ngIf="empId.errors?.['required']">
+                                    <b style="color: red;">Donor Name required.</b>
+                                  </div>
+                                  <div *nfIf="empId.error?.['pattern']">
+                                    <font color="red"><b>Invalid  Donor Name</b></font>
+
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Donor Blood Group">
+                                        Donor Blood Group
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="blood" 
+                                           #empName="ngModel" ngModel
+                                           required
+                                            pattern="[a-zA-Z]+" />
+                                </div>
+                                <div *ngIf="empId.touched">
+                                  <div *ngIf="empId.errors?.['required']">
+                                    <b style="color: red;">Donor Blood Group required.</b>
+                                  </div>
+                                  <div *nfIf="empId.error?.['pattern']">
+                                    <font color="red"><b>Invalid Donor Blood Group</b></font>
+
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Donor Contact No">
+                                        Donor Contact No
+                                    </label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           name="contact" 
+                                           #empSalary="ngModel" ngModel
+                                           required 
+                                           pattern="[0-9]+" />
+                                </div>
+                                <div *ngIf="empId.touched">
+                                  <div *ngIf="empId.errors?.['required']">
+                                    <b style="color: red;">Donor Contact No required.</b>
+                                  </div>
+                                  <div *nfIf="empId.error?.['pattern']">
+                                    <font color="red"><b>Invalid Contact No</b></font>
+                                  </div>
+                                </div>
+                                <br><br>
+                                                              
+                                <button class="btn btn-success" (click)="insertEmployee(myForm.value)">
+                                    Insert 
+                                </button>
+                            &nbsp;&nbsp;
+                                <button class="btn btn-primary" (click)="updateEmployee(myForm.value)" >
+                                    Update 
+                                </button>&nbsp;&nbsp;
+                                <button class="btn btn-danger"  (click)="deleteEmployee(myForm.value)" >
+                                    Delete 
+                                </button>&nbsp;&nbsp;
+                                <button class="btn btn-warning" (click)="findEmployee(myForm.value)" >
+                                    Find 
+                                </button>
+                                &nbsp;&nbsp;
+                                <button class="btn btn-info" (click)="findAllEmployee()">
+                                    Find All
+                                </button>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+<br>
+<h3>{{result}}</h3>
+<div style="width: 100%;" *ngIf="flag">
+  <table width="80%" align="center" class="table table-borderd">
+   <tr><th>Donor id</th><th>Donor Name</th><th>Donor Blood Group</th> <th>Donor Contact No</th></tr> 
+    <tr *ngFor="let emp of employeeArr">
+        <td> {{emp.id}} </td><td> {{emp.Name}} </td><td> {{emp.Blood}} </td><td>{{emp.Contact}}</td>
+    </tr>
+ </table>
+ </div>
+    </body>
+</html>

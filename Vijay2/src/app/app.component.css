@@ -1,0 +1,20 @@
+label{
+    font-weight: bold;
+    color: rgba(254, 251, 251, 0.925);
+}
+h1{
+    text-align: center;
+    color: rgb(245, 244, 244);
+}
+body{
+    background: url('https://t3.ftcdn.net/jpg/06/58/86/20/360_F_658862083_hvEH7I4CdI854OCZlqJZXcPLoW7sslFh.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover ;
+    padding: 20px;
+    height: 100vh;
+}
+form button:hover{
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgb(8, 138, 219),0px 0px 25px rgb(125, 177, 209),0px 0px 40px rgb(125, 177, 209);
+}
